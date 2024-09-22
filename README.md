@@ -37,10 +37,6 @@ A simple task timer application that allows users to create, manage, and track t
 
 Contributions are welcome! If you have suggestions or improvements, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
-
 ### Instructions
 - Replace `yourusername` in the installation instructions with your actual GitHub username.
 - Customize the project description or any other sections as needed to fit your specific project details. 
