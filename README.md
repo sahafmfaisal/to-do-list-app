@@ -1,6 +1,10 @@
 # Task Timer App
 
 A simple task timer application that allows users to create, manage, and track tasks with countdown timers. Users can add tasks with titles, descriptions, and timers, edit existing tasks, delete tasks, and pause/resume or reset timers as needed.
+![image](https://github.com/user-attachments/assets/c82f65c2-a79e-4d7e-ad13-301bfab730b7)
+![image](https://github.com/user-attachments/assets/b3da9f2a-ce18-45dd-aa4a-7e32c28ae5e2)
+![image](https://github.com/user-attachments/assets/1bb62cff-2232-48da-b168-c70802c3255d)
+![image](https://github.com/user-attachments/assets/ae175c7a-4e63-44dd-8004-7662f4d85954)
 
 ## Features
 
