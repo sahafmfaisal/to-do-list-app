@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Timer App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List Timer App</h1>
+            <p class="description">Manage your tasks efficiently with built-in timers</p>
+            <button id="modeToggle" class="toggle-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Task Title" required>
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <input type="number" id="taskTimer" placeholder="Timer (minutes)" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="taskList"></div>
+        <footer>
+            <div id="filterOptions">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="expired">Expired</button>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

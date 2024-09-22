@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#taskForm {
+    background: rgb(250,250, 250);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#taskForm input[type="text"],
+#taskForm input[type="number"],
+#taskForm textarea {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 17px;
+    box-sizing: border-box;
+}
+
+#taskForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#taskForm button:hover {
+    background: #27ae60;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    counter-increment: task;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+#taskList li::before {
+    content: "Task " counter(task) ": ";
+    position: absolute;
+    left: 0 10px;
+    font-weight: medium;
+}
+
+
+.task {
+    background: rgb(250,250, 250);
+    border-radius: 17px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.task.active {
+    border-left: 17px solid var(--secondary-color);
+    background-color: #d1ffcd;
+}
+
+.task.active h3::after {
+    content: "Active";
+    background-color: green;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.task.expired {
+    border-left: 17px solid var(--danger-color);
+    background-color: #ffebee;
+}
+
+.task.expired h3::after {
+    content: "Expired";
+    background-color: red;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.task .edit-btn {
+    background-color: var(--warning-color);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 17px;
+    margin-right: 10px;
+    color: white;
+}
+
+.task .delete-btn {
+    background-color: var(--danger-color);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 17px;
+    color: white;
+}
+
+.timer {
+    font-weight: bold;
+    color: var(--taskform-background-color);
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#filterOptions button {
+    background: var(--light-gray);
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 17px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+#filterOptions button.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Toggle button for Sun and Moon Icons */
+.toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.toggle-btn i {
+    transition: color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #2A2B2F;
+    --text-color: #ecf0f1;
+    --primary-color: #4B69FF;
+    --secondary-color: #27ae60;
+    --light-gray: #7f8c8d;
+    --taskform-background-color: #24262C;
+}
+
+body.dark-mode #taskForm {
+    background: #24262C;
+}
+
+body.dark-mode .task{
+    background: #24262C;
+}
+
+body.dark-mode .timer {
+    color: #ffffff;
+}
+
+body.dark-mode #taskList li {
+    color: #ffffff;
+}
+
+body.dark-mode h3, 
+body.dark-mode p {
+    color: #ffffff;
+}
+
+body.dark-mode .active .timer {
+    color: #4cff5b;
+}
+
+body.dark-mode .expired .timer {
+    color: #ff4c4c;
+}
